@@ -18,6 +18,7 @@ public class GoogleTest {
   @Before
   public void setUp() {
     Configuration.reportsFolder = "target/surefire-reports";
+	Configuration.browser = "ie";
   }
 }
 

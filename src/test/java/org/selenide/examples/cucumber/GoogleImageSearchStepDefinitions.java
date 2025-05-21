@@ -16,11 +16,11 @@ public class GoogleImageSearchStepDefinitions {
   
   @When("click \"Images\" link")
   public void chooseImagesAsSearchTarget() {
-    $(byText("Accept all")).click();
-	$(byText("Accept all")).should(disappear);
+    $(byText("Aceptar")).click();
+	$(byText("Aceptar")).should(disappear);
 
-	$(byText("Images")).shouldBe(visible);
-	$(byText("Images")).click();
+	$(byText("Imágenes")).shouldBe(visible);
+	$(byText("Imágenes")).click();
   }
 
   @When("enter a keyword {string} in input field")
@@ -33,6 +33,6 @@ public class GoogleImageSearchStepDefinitions {
 
   @Then("at least top {int} matching images should be shown")
   public void topTenMatchedImagesShouldBeShown(int resultsCount) {
-    $$(".ivg-i").shouldHave(sizeGreaterThanOrEqual(resultsCount));
+    $$(".b_algo").shouldHave(sizeGreaterThanOrEqual(resultsCount));
   }
 }

@@ -14,10 +14,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class GoogleSearchStepDefinitions {
   static boolean primerRetraso = false;	
 	
-  @Given("an open browser with google.com")
+  @Given("an open browser with bing.com")
   public void openGoogleSearch() {
     Configuration.reportsFolder = "target/surefire-reports";
-    open("https://google.com/ncr");
+    open("https://bing.com/");
 	
 	// RETRASO PARA QUE ME DÉ TIEMPO A SUBIR LA PANTALLA AL OTRO MONITOR
 	if (!primerRetraso)
@@ -35,11 +35,11 @@ public class GoogleSearchStepDefinitions {
 
   @Then("at least top {int} matches should be shown")
   public void topTenMatchesShouldBeShown(int resultsCount) {
-    $$("#res .g").shouldHave(sizeGreaterThanOrEqual(resultsCount));
+    $$(".b_algo").shouldHave(sizeGreaterThanOrEqual(resultsCount));
   }
 
   @Then("the first one should contain {string}")
   public void theFirstOneShouldContainKeyword(String expectedText) {
-    $("#res .g").shouldHave(text(expectedText));
+    $(".b_algo").shouldHave(text(expectedText));
   }
 }
