@@ -1,0 +1,123 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.selenide.examples:selenide-cucumber[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding selenide-cucumber 1.0-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mselenide-cucumber[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/debian/devops/Practica1/cucumber-helloworld/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:compile[m [1m(default-compile)[m @ [36mselenide-cucumber[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mselenide-cucumber[0;1m ---[m
+[[1;34mINFO[m] Copying 2 resources from src/test/resources to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mselenide-cucumber[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32msurefire:2.22.2:test[m [1m(default-test)[m @ [36mselenide-cucumber[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.selenide.examples.cucumber.[1mGoogleTest[m
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m3[m, [1;31mFailures: [0;1;31m3[m, Errors: 0, Skipped: 0, Time elapsed: 15.735 s[1;31m <<< FAILURE![m - in org.selenide.examples.cucumber.[1mGoogleTest[m
+[[1;31mERROR[m] user can search images by keyword(Google image search)  Time elapsed: 6.126 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementNotFound: 
+Element not found {by text: Images}
+Expected: clickable: interactable and enabled
+Screenshot: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983470901.0.png
+Page source: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983470901.0.html
+Timeout: 4 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*/text()[normalize-space(translate(string(.), '
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":".//*/text()[normalize-space(translate(string(.), '	
+ ', '    ')) = "Images"]/parent::*"}
+  (Session info: chrome=143.0.7499.146)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [220a39cc57c897470aa39e2c922a69cf, findElement {value=.//*/text()[normalize-space(translate(string(.), '	
+ ', '    ')) = "Images"]/parent::*, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 143.0.7499.146, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39077}, goog:processID: 7282, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:39077/devtoo..., se:cdpVersion: 143.0.7499.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 220a39cc57c897470aa39e2c922a69cf
+
+[[1;31mERROR[m] user can search any keyword(Google text search)  Time elapsed: 4.779 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateError: 
+Invalid element state [By.name: q]: element not interactable
+Screenshot: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983475724.1.png
+Page source: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983475724.1.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+Caused by: org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=143.0.7499.146)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [220a39cc57c897470aa39e2c922a69cf, sendKeysToElement {value=[Ljava.lang.CharSequence;@1128620c, id=f.003D82EC55A1A06A0593572036F08434.d.33047C3A55F95D3BF1814BBAB96FF0BB.e.23}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 143.0.7499.146, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39077}, goog:processID: 7282, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:39077/devtoo..., se:cdpVersion: 143.0.7499.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (220a39cc57c897470aa39e2c922a69cf)] -> name: q]
+Session ID: 220a39cc57c897470aa39e2c922a69cf
+
+[[1;31mERROR[m] user can search any keyword in Russian(Google text search)  Time elapsed: 4.588 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateError: 
+Invalid element state [By.name: q]: element not interactable
+Screenshot: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983480324.2.png
+Page source: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983480324.2.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+Caused by: org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=143.0.7499.146)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [220a39cc57c897470aa39e2c922a69cf, sendKeysToElement {value=[Ljava.lang.CharSequence;@26844abb, id=f.003D82EC55A1A06A0593572036F08434.d.6A5BF885AFC686565168D31C2934EFCE.e.37}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 143.0.7499.146, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39077}, goog:processID: 7282, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:39077/devtoo..., se:cdpVersion: 143.0.7499.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (220a39cc57c897470aa39e2c922a69cf)] -> name: q]
+Session ID: 220a39cc57c897470aa39e2c922a69cf
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  Element not found {by text: Images}
+Expected: clickable: interactable and enabled
+Screenshot: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983470901.0.png
+Page source: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983470901.0.html
+Timeout: 4 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*/text()[normalize-space(translate(string(.), '[m
+[[1;31mERROR[m] [1;31m  Invalid element state [By.name: q]: element not interactable
+Screenshot: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983480324.2.png
+Page source: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983480324.2.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable[m
+[[1;31mERROR[m] [1;31m  Invalid element state [By.name: q]: element not interactable
+Screenshot: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983475724.1.png
+Page source: file:/home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports/1765983475724.1.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 3, Failures: 3, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  17.147 s
+[[1;34mINFO[m] Finished at: 2025-12-17T15:58:00+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.2:test[m [1m(default-test)[m on project [36mselenide-cucumber[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/debian/devops/Practica1/cucumber-helloworld/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

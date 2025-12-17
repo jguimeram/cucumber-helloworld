@@ -31,7 +31,7 @@
     </plugins>
   </build>
 
-  <dependencies>
+<!--   <dependencies>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
@@ -59,10 +59,73 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>1.7.30</version>
+      <version>2.0.13</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+  </dependencies> -->
+
+<dependencies>
+
+  <!-- Cucumber -->
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.9.1</version>
+    <scope>test</scope>
+    <exclusions>
+      <exclusion>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>6.9.1</version>
+    <scope>test</scope>
+    <exclusions>
+      <exclusion>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+
+  <!-- JUnit -->
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.1</version>
+    <scope>test</scope>
+  </dependency>
+
+  <!-- Selenide -->
+  <dependency>
+    <groupId>com.codeborne</groupId>
+    <artifactId>selenide-junit4</artifactId>
+    <version>7.3.2</version>
+    <scope>test</scope>
+  </dependency>
+
+  <!-- SLF4J -->
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>2.0.13</version>
+  </dependency>
+
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.13</version>
+    <scope>test</scope>
+  </dependency>
+
+</dependencies>
+
+
 
   <reporting>
     <plugins>

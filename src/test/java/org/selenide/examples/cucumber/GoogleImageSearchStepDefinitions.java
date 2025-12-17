@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThanOrEqual;
-import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -15,7 +15,12 @@ public class GoogleImageSearchStepDefinitions {
   
   @When("click \"Images\" link")
   public void chooseImagesAsSearchTarget() {
-    $(byText("Images")).click();
+    //$(byText("Images")).click();
+    $(byText("Aceptar todo")).click();
+    $(byText("Aceptar todo")).should(disappear);
+
+    $(byText("Imágenes")).shouldBe(visible);
+    $(byText("Aceptar todo")).click();
   }
 
   @When("enter a keyword {string} in input field")
